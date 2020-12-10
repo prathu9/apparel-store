@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Route exact path="/apparel-store" component={HomePage}/>
+      <Route exact path="/" component={HomePage}/>
       <Route exact path="/shop" component={ShopPage}/>
     </div>
   );
