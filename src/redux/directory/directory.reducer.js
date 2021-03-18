@@ -1,9 +1,10 @@
-const Sections = [
+const INTIAL_STATE = {
+	sections:[
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
       id: 1,
-      linkUrl: 'hats'
+      linkUrl: 'shop/hats'
     },
     {
       title: 'jackets',
@@ -31,7 +32,13 @@ const Sections = [
       id: 5,
       linkUrl: 'shop/mens'
     }
-  ];
-  
+  ]};
 
-  export default Sections;
+  const directoryReducer = (state = INTIAL_STATE, action)=>{
+  	switch(action.type){
+  		default:
+  			return state;
+  	}
+  }
+
+  export default directoryReducer;
