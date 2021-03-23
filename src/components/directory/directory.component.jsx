@@ -9,7 +9,6 @@ import './directory.styles.scss';
 
 
 const Directory = ({sections})=>{
-    console.log(sections);
     return(
         <div className="directory-menu">
             {
