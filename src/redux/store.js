@@ -8,6 +8,7 @@ import rootReducer from "./root.reducer";
 const middlewares = [];
 
 if(process.env.NODE_ENV === 'development'){
+	console.log("test");
 	middlewares.push(logger);
 }
 
