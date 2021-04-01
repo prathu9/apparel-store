@@ -11,6 +11,7 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import {setCurrentUser} from './redux/user/user.action';
 import {selectCurrentUser} from './redux/user/user.selectors';
 
+
 import {auth, createUserProfileDocument} from './firebase/firebase.util';
 
 import './App.css';
@@ -39,6 +40,7 @@ class App extends React.Component {
         setCurrentUser(userAuth);
       }
     });
+    
   }
 
   componentWillUnmount(){
