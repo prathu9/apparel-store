@@ -6,7 +6,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import {googleSignInStart, emailSignInStart} from '../../redux/user/user.action';
 
-import './sign-in.styles.scss';
+import {SignInContainer, SignInTitle, SignInButtonContainer} from './sign-in.styles.jsx';
 
 const SignIn = ({emailSignInStart, googleSignInStart}) => {
 
@@ -26,8 +26,8 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
 
     
     return(
-        <div className="sign-in">
-            <h1>I already have an account</h1>
+        <SignInContainer>
+            <SignInTitle>I already have an account</SignInTitle>
             <span>Sign with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput 
@@ -46,16 +46,16 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
                     label="Password"
                     required
                 />
-                <div className="buttons">
+                <SignInButtonContainer>
                     <CustomButton type="submit">
                         Sign In
                     </CustomButton>
                     <CustomButton type="button" onClick={googleSignInStart} isGoogleSignIn>
                         Sign In With Google
                     </CustomButton>
-                </div>
+                </SignInButtonContainer>
             </form>
-        </div>
+        </SignInContainer>
     )
 }
 

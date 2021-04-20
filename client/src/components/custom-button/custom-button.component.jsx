@@ -4,7 +4,7 @@ import {CustomButtonContainer} from './custom-button.styles';
 
 
 const CustomButton = ({children, ...props})=>{
-
+console.log(children);
     return(
         <CustomButtonContainer className="custom-button" {...props}>
             {children}
