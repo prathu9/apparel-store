@@ -21,6 +21,7 @@ if(nodeEnv === 'development'){
 	middlewares.push(logger);
 }
 
+
 export const store = createStore(rootReducer, composeEnhancers(
 	applyMiddleware(...middlewares),
 	// other store enhancers if any
