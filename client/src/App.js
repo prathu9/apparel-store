@@ -4,13 +4,15 @@ import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 
 import Header from './components/header/header.component';
+import MobileNav from './components/mobile-nav/mobile-nav.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
 import {selectCurrentUser} from './redux/user/user.selectors';
 import {checkUserSession} from './redux/user/user.action';
+import {selectMobileNavHidden} from './redux/mobile-nav/mobile-nav.selectors';
 
-import {GlobalStyle} from './global.styles';
+import {GlobalStyle} from './global.styles.jsx';
 
 
 const HomePage = lazy(() => import('./pages/homepage/homePage.component'));
@@ -18,7 +20,8 @@ const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/Sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
-const App = ({checkUserSession, currentUser}) => {
+
+const App = ({checkUserSession, currentUser, isMobileNavHidden}) => {
 
   useEffect(
     checkUserSession,
@@ -27,7 +30,8 @@ const App = ({checkUserSession, currentUser}) => {
 
   return (
     <div className="App">
-      <GlobalStyle/>
+      <GlobalStyle isMobileNavHidden = {isMobileNavHidden}/>
+       <MobileNav/>
       <Header/>
       <Switch>
         <ErrorBoundary>
@@ -53,7 +57,8 @@ const App = ({checkUserSession, currentUser}) => {
   
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  isMobileNavHidden: selectMobileNavHidden
 });
 
 const mapDispatchToProps = dispatch => ({
