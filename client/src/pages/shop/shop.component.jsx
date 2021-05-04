@@ -16,7 +16,7 @@ const ShopPage = ({fetchCollectionsStart, match}) => {
 		fetchCollectionsStart,
 		[fetchCollectionsStart]
 	);
-
+console.log(match)
 	return(
       	<div className ="ShopPage">
 			<Suspense fallback={<Spinner />}>

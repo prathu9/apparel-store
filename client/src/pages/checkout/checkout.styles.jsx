@@ -8,6 +8,11 @@ export const CheckoutPageContainer = Styled.div`
     flex-direction: column;
     align-items: center;
     margin: 50px auto 0;
+
+    @media screen and (max-width: 450px){
+        width: 90%;
+
+    }
 `;
 
 export const CheckoutHeader = Styled.div`

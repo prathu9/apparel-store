@@ -3,9 +3,19 @@ import styled from 'styled-components';
 export const CollectionPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+
+  & > button{
+    margin:30px auto;
+    width: 20%;
+  }
+
   @media screen and (max-width: 800px) {
     align-items: center;
+
+    & > button{
+      width: 50%;
+    }
   }
 `;
 

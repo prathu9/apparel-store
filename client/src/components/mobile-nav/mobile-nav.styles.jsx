@@ -20,7 +20,7 @@ const contract = keyframes`
 `;
 
 export const MobileNavOverlay = Styled.div`
-    position:absolute;
+    position:fixed;
     top:70px;
     left:0;
     width: 100%;

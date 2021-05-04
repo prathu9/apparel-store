@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SignInAndSignUpContainer = styled.div`
-    /* width:850px; */
+    min-width:320px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;

@@ -31,8 +31,7 @@ const MobileNav = ({toggleMobileNavHidden,
 
     useEffect(() => {
         //adding event listener on mount
-        window.addEventListener("resize", toggleMobileNavHiddenOnResize); 
-        console.log("test");                                             
+        window.addEventListener("resize", toggleMobileNavHiddenOnResize);                                           
         //Removing event listener on unmount
         return () => {
             window.removeEventListener("resize", toggleMobileNavHiddenOnResize);

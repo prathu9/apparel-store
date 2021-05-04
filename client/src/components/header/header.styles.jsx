@@ -17,7 +17,6 @@ export const HeaderContainer = Styled.div`
     z-index: 10;
 
     @media screen and (max-width: 800px){
-        height:60px;
         padding:10px;
         margin-bottom:10px;
     }

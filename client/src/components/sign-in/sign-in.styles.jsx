@@ -5,6 +5,10 @@ export const SignInContainer = styled.div`
     display:flex;
     flex-direction: column;
     margin-right:10px;
+
+    @media screen and (max-width: 450px){
+        width: 300px;
+    }
 `;
 
 export const SignInTitle = styled.h1`

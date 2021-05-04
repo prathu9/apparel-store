@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const ErrorImageOverlay = styled.div`
   height: 60vh;
@@ -20,5 +21,14 @@ export const ErrorImageContainer = styled.div`
 
 export const ErrorImageText = styled.h2`
   font-size: 28px;
+  text-align:center;
+
+  span{
+    font-size:18px;
+  }
+`;
+
+export const TryAgainLink = styled(Link)`
+  text-decoration: underline;
   color: #684CFF;
 `;

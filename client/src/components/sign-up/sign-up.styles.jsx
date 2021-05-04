@@ -12,6 +12,10 @@ export const SignUpContainer = styled.div`
             width:100%;
         }
     }
+
+    @media screen and (max-width: 450px){
+        width: 300px;
+    }
 `;
 
 export const SignUpTitle = styled.h1`
